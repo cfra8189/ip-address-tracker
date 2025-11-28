@@ -1,5 +1,5 @@
 const IPIFY_API_KEY = "at_JNMdz7vg9bg0K3HIaPUN8OEZEvzPb";
-const API_BASE_URL = "https://geo.ipify.org/api/v2/country,city?apiKey=" + IPIFY_API_KEY;
+const API_BASE_URL = `https://geo.ipify.org/api/v2/country,city?apiKey=${IPIFY_API_KEY}`;
 let ipAddress = document.getElementById("ip-address");
 let locationData = document.getElementById("location");
 let timezone = document.getElementById("timezone");
