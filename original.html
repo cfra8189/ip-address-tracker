@@ -1,0 +1,44 @@
+ <img id="bg-image" src="./images/pattern-bg-desktop.png" alt="">
+
+  <div class="row container">
+    <h1 id="title">IP Address Tracker</h1>
+
+    <div class="row search-container">
+    <div class="row input-group">
+        
+        <input 
+            id="ip-search" 
+            type="text" 
+            placeholder="Search for any IP address or domain" 
+        />
+        <button><a class="search-btn" id="search-button">
+            <img src="./images/icon-arrow.svg" alt="Search">
+        </a></button>
+        
+    </div>
+</div>
+    <div class="display-card">
+      <div class="display-cell">
+        <p class="display-title">IP Address</p>
+        <p class="display-output" id="ip-address"></p>
+        
+      </div>
+      <div class="display-cell">
+        <p class="display-title">Location</p>
+        <p class="display-output" id="location"></p>
+        
+      </div>
+      <div class="display-cell">
+       <p class="display-title">Timezone</p>
+        <p class="display-output" id="timezone"></p>
+        
+      </div>
+      <div class="display-cell">
+        <p class="display-title">ISP</p>
+        <p class="display-output" id="isp"></p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div id="map"></div>
