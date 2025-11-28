@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-      defer
-    ></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-      defer
-    ></script>
-    <script src="./js/script.js" defer></script>
-    <title>Frontend Mentor | IP Address Tracker</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="./js/script.js" defer></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
 
-  <body>
-    <div>
-      <img src="" />
-      <div id="map"></div>
-      <div></div>
-      <div></div>
-      <div>Search for any IP address or domain</div>
-      <div></div>
-      <div>IP Address Tracker</div>
-      <div>
-        <div></div>
+<body>
+  <div class="container-fluid">
+    <img class="col s12" id="bg-pattern" src="./images/pattern-bg-desktop.png" alt="Background Pattern" />
+
+    <header id="header-content">
+      <h1 class="center-title">IP Address Tracker</h1>
+
+      <div id="search-container">
+        <div id="search-row">
+          <input type="text" id="search-input" placeholder="Search for any IP address or domain" />
+          <button class="btn search-btn" id="search-btn">
+            <img src="./images/icon-arrow.svg" alt="Search" />
+          </button>
+        </div>
       </div>
-      <div></div>
-      <div>192.212.174.101</div>
-      <div>IP ADDRESS</div>
-      <div></div>
-      <div></div>
-      <div>Brooklyn, NY<br />10001</div>
-      <div>LOCATION</div>
-      <div></div>
-      <div>UTC -05:00</div>
-      <div>TIMEZONE</div>
-      <div></div>
-      <div>SpaceX<br />Starlink</div>
-      <div>ISP</div>
-      <div></div>
-      <div></div>
-      <div></div>
+    </header>
+
+    <div class="row">
+      <div class="info-card z-depth-1 col s10 offset-s1 m10 offset-m1 l10 offset-l1">
+        <div class="row info-card-content" style="margin-top: 20px; ">
+
+          <div class="card-item card-divider">
+            <p class="output-title">IP ADDRESS</p>
+            <p id="ip-address" class="output-data">192.212.174.101</p>
+          </div>
+
+          <div class="card-item card-divider">
+            <p class="output-title">LOCATION</p>
+            <p id="location" class="output-data">Brooklyn, NY<br />10001</p>
+          </div>
+
+          <div class="card-item card-divider">
+            <p class="output-title">TIMEZONE</p>
+            <p id="timezone" class="output-data">UTC -05:00</p>
+          </div>
+
+          <div class="card-item">
+            <p class="output-title">ISP</p>
+            <p id="isp" class="output-data">SpaceX<br />Starlink</p>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </body>
+
+    <div id="map"></div>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Clarence Franklin</a>.
+  </div>
+  </div>
+</body>
+
 </html>
