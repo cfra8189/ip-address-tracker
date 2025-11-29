@@ -173,7 +173,7 @@ body {
   #search-group-container {
     width: 90% !important;
     max-width: none;
-  }
+    }
 
   .card-item {
     flex: none;
@@ -190,18 +190,19 @@ body {
 
   .card-divider {
     border-right: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #d8d8d8;
     padding-bottom: 15px;
     margin-bottom: 15px;
   }
 
   .info-card {
     padding: 30px 20px;
+    margin-top: -100px;
+    margin-bottom: 80px;
   }
 
-  .card-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
+  #map {
+    top: 300px;
+    height: 700px;
   }
 }

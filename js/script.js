@@ -14,15 +14,18 @@ let map;
 let myIcon = L.icon({
     iconUrl: './images/icon-location.svg',
     iconSize: [46, 56],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76],
-    shadowUrl: './images/icon-location-shadow.png',
-    shadowSize: [68, 95],
-    shadowAnchor: [22, 94]
+    iconAnchor: [0, 0]
 });
 searchBtn.addEventListener("click", () => {
   userIp = ipInput.value;
   searchIp(userIp);
+});
+
+ipInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    userIp = ipInput.value;
+    searchIp(userIp);
+  }
 });
 
 async function searchIp(ip) {
@@ -51,7 +54,7 @@ async function searchIp(ip) {
   const longitude = data.location.lng;
 
   if (!map) {
-    map = L.map("map").setView([latitude, longitude], 13);
+    map = L.map("map").setView([latitude, longitude], 15);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
