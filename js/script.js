@@ -9,6 +9,10 @@ const apiKey = "at_SFOD5JiuWTzp4vcHnp9dMAjDY4eio";
 let userIp = "8.8.8.8";
 const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${userIp}`;
 
+searchBtn.addEventListener("click", () => {
+    userIp = ipInput.value;
+    searchIp(userIp);
+});
 
 
 async function searchIp(ip) {

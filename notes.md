@@ -43,4 +43,8 @@ https://www.youtube.com/watch?v=uxf0--uiX0I&t=774s
 1.5 Mapping Geolocation with Leaflet.js - Working with Data and APIs in JavaScript
 https://www.youtube.com/watch?v=nZaZ2dB6pow
 
-
+List of IP Address to demonstrate:
+- Google Public DNS: 8.8.8.8 
+- Cloudflare DNS: 1.1.1.1 
+- Amazon.com: 72.21.211.176 
+- Wikipedia.org: 208.80.152.201 
