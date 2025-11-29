@@ -16,12 +16,30 @@ async function searchIp(ip) {
     const data = await response.json();
     console.log(data);
 
-    try{}
-    catch{}
-    finally{}
+    try{
+        ipAdd.innerText = data.ip;
+        locationEl.innerText = `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
+        timezoneEl.innerText = `UTC ${data.location.timezone}`;
+        ispEl.innerText = data.isp;
+
+        if (!response.ok) {
+            throw new Error(`SOMETHING WENT WRONG: ${data.message}`);
+        }
+
+    }
 
 
-    
+    catch{
+        alert("d>_<b "+ error.message);
+    }
+
+
+    finally{
+        console.log("Search completed!!! d^_^b");
+    }
+
+
+
 }
 
 searchIp(userIp);
