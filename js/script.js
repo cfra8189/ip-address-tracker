@@ -9,3 +9,9 @@ const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=
 const apiKey = "at_SFOD5JiuWTzp4vcHnp9dMAjDY4eio";
 let userIp;
 
+async function searchIp(ip) {
+
+    try{}
+    catch{}
+    finally{}
+}
