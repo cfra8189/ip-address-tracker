@@ -13,6 +13,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+#bg-pattern {
+  user-select: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .container-fluid {
   position: relative;
   width: 100%;
@@ -152,10 +157,12 @@ body {
 }
 
 #map {
-  position: relative;
-  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  z-index: 0; 
   height: 550px;
-  margin-top: 0;
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
