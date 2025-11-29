@@ -9,6 +9,17 @@ const apiKey = "at_SFOD5JiuWTzp4vcHnp9dMAjDY4eio";
 let userIp = "8.8.8.8";
 const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${userIp}`;
 
+let map;
+
+let myIcon = L.icon({
+    iconUrl: './images/icon-location.svg',
+    iconSize: [46, 56],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowUrl: './images/icon-location-shadow.png',
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+});
 searchBtn.addEventListener("click", () => {
   userIp = ipInput.value;
   searchIp(userIp);
@@ -39,13 +50,17 @@ async function searchIp(ip) {
   const latitude = data.location.lat;
   const longitude = data.location.lng;
 
-    const map = L.map("map").setView([latitude, longitude], 13);
+  if (!map) {
+    map = L.map("map").setView([latitude, longitude], 13);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
-    const marker = L.marker([latitude, longitude]).addTo(map);
-    
+    marker = L.marker([latitude, longitude], {icon: myIcon}).addTo(map);
+  } else {
+    map.setView([latitude, longitude], 13);
+    marker.setLatLng([latitude, longitude]);
+  }
 }
 
 searchIp(userIp);
