@@ -3,6 +3,7 @@
 #### A frontend web application that allows users to look up IP address information in real time.
 
 <img src="./design/wireframe.png" alt="IP Address Tracker Wireframe"/>
+<img src="./IP-snippet.GIF" alt="IP Tracker - Active Demo"/>
 
 ## Description
 
