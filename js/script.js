@@ -6,7 +6,7 @@ const searchBtn = document.getElementById("search-btn");
 const ipInput = document.getElementById("search-input");
 
 const apiKey = "at_SFOD5JiuWTzp4vcHnp9dMAjDY4eio";
-let userIp = "8.8.8.8";
+let userIp = "";
 const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${userIp}`;
 
 let map;

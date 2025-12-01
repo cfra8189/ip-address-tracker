@@ -21,7 +21,8 @@ The app takes a user-entered IP address, calls a geolocation API, and displays d
 - [Deployed App](#deployment)  
 - [About the Author](#author)  
 - [Works Cited](#works-cited)  
-- [Notes](#notes)  
+- [Notes](#notes) 
+- [Reflections] (#reflections) 
 
 ## <a name="technologiesused"></a>Technologies Used
 
@@ -165,3 +166,11 @@ These examples illustrate how to use `async/await` with `fetch` to request data 
 - To move items on a webpage manually using CSS, set the element's `position` property and then use `top`, `bottom`, `left`, or `right` to place it.
   - `position: relative;` moves an element relative to where it would normally sit; the original space remains reserved.
   - `position: absolute;` removes the element from the normal document flow and positions it relative to its nearest positioned ancestor, so other elements ignore its space.
+
+## <a name="reflections"></a>Reflections
+
+The concept of this project was simple, but the journey to the MVP was a bit challenging and long. I just had to create a simple page that takes a plain IP address and turn it into something visual data on the screen. I began with the basics, building out the layout with HTML and CSS and using a Figma design as my reference. From there, I wired up the JavaScript to handle user input, call the geolocation API, and update the page and map based on the response.​
+
+One of my biggest challenges was refactoring the Figma-to-code output into something I could actually use in my project. Because I didn’t label anything in Figma or use auto layout, the code export gave me a wall of nested divs with tons of inline styles, and it took hours to sort through and restructure it into cleaner HTML and CSS. I also had to juggle Materialize with my own custom styles—using Materialize mainly for responsiveness while still fighting some of its default classes to get the layout looking right.​​
+
+On the JavaScript side, getting comfortable with fetch, async functions, and parsing JSON from the API response was another learning curve, but working through docs and examples helped things click. If I had more time, I would improve the user experience by adding clearer error states, loading indicators, and support for domain lookups, and I’d spend time refactoring the codebase to be more modular and reusable so it’s easier to extend later.
